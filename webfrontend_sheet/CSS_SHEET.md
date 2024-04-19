@@ -125,8 +125,3 @@ a:hover {
 li:nth-child(even) {
   background-color: #f2f2f2;
 }
-```
-
----
-
-Puoi salvare questo testo in un file con estensione `.md` per utilizzarlo come documento Markdown.
