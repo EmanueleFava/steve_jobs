@@ -24,28 +24,109 @@ p {
 }
 ```
 
+Ecco la sezione "Proprietà" suddivisa in sotto-sezioni con esempi di proprietà specifiche che influenzano testi, box e altri elementi:
+
 ## Proprietà
 
 Le proprietà CSS definiscono l'aspetto degli elementi selezionati. Alcune delle proprietà più utilizzate includono:
 
+### Testo
+
 - **color**: definisce il colore del testo.
 - **font-family**: imposta il tipo di carattere.
 - **font-size**: specifica la dimensione del carattere.
+- **font-weight**: imposta lo spessore del carattere (bold, normal, etc.).
+- **text-align**: allinea il testo (left, right, center, justify).
+
+Esempio:
+```css
+p {
+  color: blue;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+```
+
+### Box
+
 - **background-color**: imposta il colore dello sfondo.
 - **padding**: definisce lo spazio interno dell'elemento.
 - **margin**: imposta lo spazio esterno dell'elemento.
 - **border**: definisce lo stile, lo spessore e il colore del bordo.
+- **border-radius**: arrotonda gli angoli del bordo.
 
 Esempio:
 ```css
-h1 {
-  color: red;
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  background-color: #fff;
-  padding: 10px;
-  margin: 0;
+.box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 10px;
   border: 1px solid black;
+  border-radius: 5px;
+}
+```
+### Sfondo
+
+- **background-image**: imposta un'immagine di sfondo per l'elemento.
+- **background-repeat**: specifica se e come l'immagine di sfondo deve essere ripetuta.
+- **background-position**: definisce la posizione iniziale dell'immagine di sfondo.
+
+Esempio:
+```css
+.header {
+  background-image: url('header-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+```
+
+### Dimensioni e Posizionamento
+
+- **width**: imposta la larghezza dell'elemento.
+- **height**: imposta l'altezza dell'elemento.
+- **max-width**: specifica la larghezza massima dell'elemento.
+- **max-height**: specifica l'altezza massima dell'elemento.
+- **position**: imposta il metodo di posizionamento dell'elemento (static, relative, absolute, fixed).
+- **top, right, bottom, left**: definiscono la posizione dell'elemento rispetto al suo contenitore o al documento.
+
+Esempio:
+```css
+.sidebar {
+  width: 250px;
+  max-width: 80%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+```
+
+### Animazioni
+
+- **animation-name**: specifica il nome dell'animazione.
+- **animation-duration**: definisce la durata dell'animazione.
+- **animation-delay**: specifica un ritardo prima dell'inizio dell'animazione.
+- **animation-timing-function**: definisce la funzione di temporizzazione dell'animazione.
+- **animation-iteration-count**: specifica quante volte l'animazione deve ripetersi.
+
+Esempio:
+```css
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
 }
 ```
 
